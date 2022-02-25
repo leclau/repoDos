@@ -446,6 +446,23 @@ h4{
         height: 30rem;
     }
 
+    #bodyHelp{
+        height: 1900px;
+        margin-top: 150px;
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 80px 200px 80px 200px 80px 200px 80px 200px;
+        grid-template-areas:    "b1"
+                                "b2"
+                                "b3"
+                                "b4"
+                                "b5"
+                                "b6"
+                                "b7"
+                                "b8";
+        justify-content: center;
+        }
+
 }
 
 @media only screen and (max-width: 900px){
@@ -615,36 +632,83 @@ h4{
 
     #bodyHelp{
         width: 100%;
-        height: 550px;
+        max-width: 120rem;
+        height: 1200px;
         margin-top: 150px;
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 80px 200px 80px 200px 80px 200px 80px 200px;
+        grid-template-areas:    "b1 b1"
+                                "b2 b2"
+                                "b3 b3"
+                                "b4 b4"
+                                "b5 b5"
+                                "b6 b6"
+                                "b7 b7"
+                                "b8 b8";
+        justify-content: center;
 
-        h3{
+        .titleTerms{
             text-align: center;
             font-size: 32px;
             font-style: normal;
             font-weight: bold;
             font-family: Arial;
-            color: #aaaaaa;
-        }
-
-        p{
-            text-align: center;
-            font-size: 17px;
-            font-style: normal;
-            font-family: Arial;
             color: black;
+            grid-area: b1;
         }
 
-        ul{
-            display: flex;
-            flex-direction: column;
-            list-style-type: circle;
-            text-align: center;
-            align-items: center;
+        .txt1{
+            @extend .titleTerms;
             font-size: 17px;
+            font-weight: lighter;
+            grid-area: b2;
+        }
+
+        .titleTerms1{
+            @extend .titleTerms;
+            color: #7f7f7f;
+            grid-area: b3;
+        }
+
+        .txt2{
+            @extend .titleTerms;
+            font-size: 17px;
+            font-weight: lighter;
+            grid-area: b4;
+        }
+
+        .titleTerms2{
+            @extend .titleTerms;
+            color: #a5a5a5;
+            grid-area: b5;
+        }
+
+        .txt3{
+            @extend .titleTerms;
+            font-size: 17px;
+            font-weight: lighter;
+            grid-area: b6;
+        }
+
+        @mixin titleSize($color, $sizePt) {
+            text-align: center;
+            font-size: $sizePt;
             font-style: normal;
-            font-weight: normal;
+            font-weight: bold;
             font-family: Arial;
+            color: $color;
+        }
+
+        .titleTerms3{
+            @include titleSize(#cccccc, 32px);
+            grid-area: b7;
+        }
+
+        .txt4{
+            @include titleSize(black, 17px);
+            font-weight: lighter;
+            grid-area: b8;
         }
 
     }

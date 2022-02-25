@@ -326,7 +326,15 @@ h4 {
   .img-1,
   .img-6 {
     min-height: 30rem;
-    height: 30rem; } }
+    height: 30rem; }
+  #bodyHelp {
+    height: 1900px;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 80px 200px 80px 200px 80px 200px 80px 200px;
+    grid-template-areas: "b1" "b2" "b3" "b4" "b5" "b6" "b7" "b8";
+    justify-content: center; } }
 
 @media only screen and (max-width: 900px) {
   .imageGallery {
@@ -457,28 +465,54 @@ h4 {
 /* MAIN SECTION-HELP */
 #bodyHelp {
   width: 100%;
-  height: 550px;
-  margin-top: 150px; }
-  #bodyHelp h3 {
+  max-width: 120rem;
+  height: 1200px;
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 80px 200px 80px 200px 80px 200px 80px 200px;
+  grid-template-areas: "b1 b1" "b2 b2" "b3 b3" "b4 b4" "b5 b5" "b6 b6" "b7 b7" "b8 b8";
+  justify-content: center; }
+  #bodyHelp .titleTerms, #bodyHelp .txt1, #bodyHelp .titleTerms1, #bodyHelp .txt2, #bodyHelp .titleTerms2, #bodyHelp .txt3 {
     text-align: center;
     font-size: 32px;
     font-style: normal;
     font-weight: bold;
     font-family: Arial;
-    color: #aaaaaa; }
-  #bodyHelp p {
-    text-align: center;
+    color: black;
+    grid-area: b1; }
+  #bodyHelp .txt1 {
     font-size: 17px;
+    font-weight: lighter;
+    grid-area: b2; }
+  #bodyHelp .titleTerms1 {
+    color: #7f7f7f;
+    grid-area: b3; }
+  #bodyHelp .txt2 {
+    font-size: 17px;
+    font-weight: lighter;
+    grid-area: b4; }
+  #bodyHelp .titleTerms2 {
+    color: #a5a5a5;
+    grid-area: b5; }
+  #bodyHelp .txt3 {
+    font-size: 17px;
+    font-weight: lighter;
+    grid-area: b6; }
+  #bodyHelp .titleTerms3 {
+    text-align: center;
+    font-size: 32px;
     font-style: normal;
+    font-weight: bold;
     font-family: Arial;
-    color: black; }
-  #bodyHelp ul {
-    display: flex;
-    flex-direction: column;
-    list-style-type: circle;
+    color: #cccccc;
+    grid-area: b7; }
+  #bodyHelp .txt4 {
     text-align: center;
-    align-items: center;
     font-size: 17px;
     font-style: normal;
-    font-weight: normal;
-    font-family: Arial; }
+    font-weight: bold;
+    font-family: Arial;
+    color: black;
+    font-weight: lighter;
+    grid-area: b8; }
